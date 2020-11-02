@@ -8,6 +8,9 @@ ansible/.vault_pass
 *.vault
 ansible/tmp
 
+ansible/collections/
+
+
 #
 # Python things
 #

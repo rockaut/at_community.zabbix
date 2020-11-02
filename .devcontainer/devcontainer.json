@@ -31,6 +31,6 @@
 
 	"forwardPorts": [],
 
-	"postCreateCommand": "pip3 install --user -r requirements.txt",
+	"postCreateCommand": "cd ./ansible && ansible-galaxy collection install -r requirements.yml"
 
 }

@@ -1,0 +1,7 @@
+---
+
+collections:
+  - name: https://github.com/rockaut/community.zabbix.git
+    type: git
+    version: master
+  - name: ansible.netcommon

@@ -10,7 +10,9 @@ ARG VARIANT="3"
 FROM mcr.microsoft.com/vscode/devcontainers/python:0-${VARIANT}
 
 COPY requirements.txt /tmp/pip-tmp/
-RUN pip3 --disable-pip-version-check --no-cache-dir install -r /tmp/pip-tmp/requirements.txt \
+RUN pip3 --disable-pip-version-check --no-cache-dir install wheel && \
+    pip3 --disable-pip-version-check --no-cache-dir install q && \
+    pip3 --disable-pip-version-check --no-cache-dir install -r /tmp/pip-tmp/requirements.txt \
     && rm -rf /tmp/pip-tmp
 
 # [Optional] Uncomment this section to install additional packages.
