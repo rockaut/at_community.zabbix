@@ -5,3 +5,30 @@
   tasks:
     - name: just for fun
       ping:
+
+- hosts:
+    - zabbix-web
+  module_defaults:
+    zabbix_host:
+      server_url: http://zabbix-web:8080
+      login_user: Admin
+      login_password: zabbix
+    zabbix_group:
+      server_url: http://zabbix-web:8080
+      login_user: Admin
+      login_password: zabbix
+  tasks:
+    - zabbix_group:
+        host_groups:
+          - ansible
+    - zabbix_host:
+        host_name: "{{ inventory_hostname }}"
+        status: enabled
+        host_groups:
+          - ansible
+        interfaces:
+          - type: 1
+            main: 1
+            useip: 0
+            dns: "{{ inventory_hostname }}"
+            port: "10050"
