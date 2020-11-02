@@ -1,7 +1,7 @@
 # Ansible Boilerplate for community.zabbix
 
-You can find the community repository at https://github.com/ansible-collections/community.zabbix
 With this repository you can quickly start tinkering around with ansible on zabbix and the community.zabbix repository.
+You can find the community repository at https://github.com/ansible-collections/community.zabbix .
 
 It builds an VSCode devcontainer with all the things installed and starts it up alongside all the needed Zabbix components needed.
 
